@@ -79,8 +79,8 @@ const Resume = () => {
                 <li>
                   <p className="font-semibold">AI Engineer - Amrita Vishwa Vidyapeetham, Faridabad, New Delhi (Jul 2025 - Present)</p>
                   <ul className="list-disc ml-5 mt-1">
-                    <!-- <li></li>
-                    <li></li> -->
+                    {/* <li></li>
+                    <li></li> */}
                   </ul>
                 </li>
                 <li>
@@ -139,13 +139,13 @@ const Resume = () => {
                     <li>Implemented image classification techniques to diagnose diseases and provide treatment recommendations.</li>
                   </ul>
                 </li>
-                <!-- <li>
+                {/* <li>
                   <p className="font-semibold">Doodle Classification | Python, CNN, Google QuickDraw Dataset (Aug 2024 – Oct 2024)</p>
                   <ul className="list-disc ml-5 mt-1">
                     <li>Developed a CNN model to classify doodle images into different categories.</li>
                     <li>Trained and evaluated on the Google QuickDraw Dataset, achieving high accuracy.</li>
                   </ul>
-                </li> -->
+                </li> */}
               </ul>
             </section>
 
