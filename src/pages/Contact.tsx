@@ -38,17 +38,21 @@ const Contact = () => {
     try {
       contactSchema.parse(formData);
 
+      console.log('Sending email with data:', { name: formData.name, email: formData.email });
+      
       // Send email using EmailJS
-      await emailjs.send(
-        'service_q7ab7n6',     // Replace with your EmailJS Service ID
-        'template_qnbhf92',    // Replace with your EmailJS Template ID
+      const response = await emailjs.send(
+        'service_q7ab7n6',
+        'template_qnbhf92',
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
         },
-        's3x-pBAWb70S2d4fq'      // Replace with your EmailJS Public Key
+        's3x-pBAWb70S2d4fq'
       );
+
+      console.log('EmailJS response:', response);
 
       toast({
         title: 'Message sent successfully!',
@@ -86,7 +90,22 @@ const Contact = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
+          className="mb-8"
+        >
+          <div className="bg-primary text-primary-foreground rounded-xl p-6">
+            <h3 className="font-bold text-lg mb-2">Looking for AI Engineers?</h3>
+            <p className="text-sm opacity-90">
+              I'm available for full-time opportunities and interesting freelance projects. 
+              Let's discuss how I can contribute to your team.
+            </p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="mb-12"
         >
           <h1 className="mb-4">Get in Touch</h1>
@@ -214,13 +233,6 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-primary text-primary-foreground rounded-xl p-6">
-              <h3 className="font-bold text-lg mb-2">Looking for AI Engineers?</h3>
-              <p className="text-sm opacity-90">
-                I'm available for full-time opportunities and interesting freelance projects. 
-                Let's discuss how I can contribute to your team.
-              </p>
-            </div>
           </motion.div>
         </div>
       </div>
