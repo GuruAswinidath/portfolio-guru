@@ -38,9 +38,9 @@ const Home = () => {
             className="max-w-4xl"
           >
             <h1 className="mb-6 text-balance">
-              Guru Aswini Dath 
-              <br>
-              AI Engineer & Software Developer
+              Guru Aswini Dath
+              <br />
+              <span className="text-lg text-muted-foreground">AI Engineer & Software Developer</span>
             </h1>
             <h2 className="text-xl md:text-2xl text-secondary mb-8 font-normal max-w-3xl">
               Building scalable, intelligent systems that turn research into production.
