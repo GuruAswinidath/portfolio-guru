@@ -94,10 +94,9 @@ const Contact = () => {
           className="mb-8"
         >
           <div className="bg-primary text-primary-foreground rounded-xl p-6">
-            <h3 className="font-bold text-lg mb-2">Looking for AI Engineers?</h3>
+            <h3 className="font-bold text-lg mb-2">looking for AI engineers?</h3>
             <p className="text-sm opacity-90">
-              I'm available for full-time opportunities and interesting freelance projects. 
-              Let's discuss how I can contribute to your team.
+              i'm available for full-time opportunities and interesting freelance projects. Let's discuss how I can contribute to your team.
             </p>
           </div>
         </motion.div>
@@ -169,7 +168,7 @@ const Contact = () => {
                 {errors.message && <p className="text-destructive text-sm mt-1">{errors.message}</p>}
               </div>
 
-              <Button type="submit" size="lg" disabled={!isFormValid || isSubmitting} className="w-full group">
+              <Button type="submit" size="lg" disabled={isSubmitting} className="w-full group">
                 {isSubmitting ? (
                   'Sending...'
                 ) : (
