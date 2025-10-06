@@ -2,6 +2,11 @@ import vidyavedaImg from '@/assets/vidyaveda.jpg';
 import plantDiseaseImg from '@/assets/plant-disease.jpg';
 import wasteManagementImg from '@/assets/waste-management.jpg';
 import doodleImg from '@/assets/doodle-classification.jpg';
+import wildlifeImg from '@/assets/wildlife-railguard.jpg';
+import aiMonitoringImg from '@/assets/ai-monitoring.jpg';
+import productRecImg from '@/assets/product-recommendation.jpg';
+import qrCodeImg from '@/assets/qr-code.jpg';
+import legalMgmtImg from '@/assets/legal-management.jpg';
 
 export interface Project {
   id: string;
@@ -67,5 +72,65 @@ export const projects: Project[] = [
     results: 'Achieved 85% accuracy on 10 doodle categories (cat, house, tree, car, etc.). Model processes drawings in real-time with <100ms latency. Successfully deployed as interactive web demo. Model size optimized to 12MB for faster loading.',
     github: 'https://github.com/guruaswinidath/doodle-classifier',
     demo: 'https://doodle-classifier-demo.com',
+  },
+  {
+    id: 'wildlife',
+    title: 'WildLife RailGuard — Train-Animal Collision Mitigation',
+    description: 'AI-powered wildlife detection system for railway safety.',
+    image: wildlifeImg,
+    tags: ['Python', 'AI', 'Computer Vision', 'Conservation'],
+    metric: 'Improved railway safety',
+    problem: 'High rate of train-animal collisions in forest regions endangers wildlife.',
+    approach: 'Built an AI detection system to identify animals on railway tracks and alert operators in real-time.',
+    results: 'Reduced wildlife collisions and improved safety along railway routes.',
+    github: 'https://github.com/GuruAswinidath/WildLife',
+  },
+  {
+    id: 'ai-monitoring',
+    title: 'AI Monitoring Agent',
+    description: 'Automated monitoring and alert system for AI pipelines.',
+    image: aiMonitoringImg,
+    tags: ['Python', 'AI', 'Monitoring', 'Automation'],
+    metric: '30% reduction in downtime',
+    problem: 'AI pipelines often fail silently, causing delays and incorrect predictions.',
+    approach: 'Developed an automated monitoring agent that tracks pipeline performance, logs metrics, and triggers alerts when anomalies are detected.',
+    results: 'Reduced downtime by 30% and improved reliability of AI systems in production.',
+    github: 'https://github.com/GuruAswinidath/AI-Monitoring-Agent',
+  },
+  {
+    id: 'product-recommendation',
+    title: 'Product Recommendation System',
+    description: 'Personalized recommendations using collaborative filtering and ML models.',
+    image: productRecImg,
+    tags: ['Python', 'ML', 'Recommendation System', 'Data Science'],
+    metric: '25% increase in engagement',
+    problem: 'E-commerce platforms struggle to provide relevant product suggestions to users.',
+    approach: 'Built a recommendation engine using collaborative filtering and ML algorithms. Integrated with web interface to deliver personalized product suggestions.',
+    results: 'Improved click-through rates and user engagement by 25%.',
+    github: 'https://github.com/GuruAswinidath/Product-Recommendation-System',
+  },
+  {
+    id: 'qr-code-generator',
+    title: 'QR Code Generator & Decoder Using Python OpenCV',
+    description: 'Generates and decodes QR codes efficiently for multiple applications.',
+    image: qrCodeImg,
+    tags: ['Python', 'OpenCV', 'Computer Vision', 'Automation'],
+    metric: 'Instant QR generation & scanning',
+    problem: 'Manual QR code generation and decoding is time-consuming and prone to errors.',
+    approach: 'Implemented a Python tool using OpenCV to create and decode QR codes with a simple GUI interface.',
+    results: 'Enabled instant QR code generation and scanning, improving efficiency for projects requiring quick data sharing.',
+    github: 'https://github.com/GuruAswinidath/QR-Code-Generator-and-Decoder-Using-Python-OpenCV',
+  },
+  {
+    id: 'legal-management',
+    title: 'Legal Management System',
+    description: 'Web-based system to manage legal cases, clients, and documents.',
+    image: legalMgmtImg,
+    tags: ['Python', 'Django', 'Web App', 'Database'],
+    metric: 'Improved case tracking efficiency',
+    problem: 'Law firms need a centralized system to manage multiple clients, cases, and legal documents.',
+    approach: 'Developed a Django web application to track case progress, manage client data, and store legal documents securely.',
+    results: 'Improved case tracking efficiency and reduced administrative overhead for legal teams.',
+    github: 'https://github.com/GuruAswinidath/Legal-Management-System',
   },
 ];

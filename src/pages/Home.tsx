@@ -8,7 +8,9 @@ import { projects } from '@/data/projects';
 import heroImg from '@/assets/hero-bg.jpg';
 
 const Home = () => {
-  const featuredProjects = projects.slice(0, 3);
+  const featuredProjects = projects.filter(p => 
+    ['vidyaveda', 'plant-disease', 'wildlife'].includes(p.id)
+  );
 
   const stats = [
     { icon: BookOpen, label: 'Publications', value: '3' },
