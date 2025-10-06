@@ -13,7 +13,7 @@ const Home = () => {
   const stats = [
     { icon: BookOpen, label: 'Publications', value: '3' },
     { icon: Award, label: 'Hackathon Awards', value: '3' },
-    { icon: Briefcase, label: 'Internships', value: '3' },
+    { icon: Briefcase, label: 'Internships', value: '4' },
   ];
 
   return (
@@ -48,12 +48,12 @@ const Home = () => {
                   <ArrowRight className="ml-2 h-5 w-5 transition-smooth group-hover:translate-x-1" />
                 </Button>
               </Link>
-              <a href="/resume.pdf" download>
+              {/* <a href="/resume.pdf" download>
                 <Button size="lg" variant="outline" className="group">
                   <Download className="mr-2 h-5 w-5 transition-smooth group-hover:translate-y-1" />
                   Download Resume
                 </Button>
-              </a>
+              </a> */}
             </div>
           </motion.div>
         </div>
