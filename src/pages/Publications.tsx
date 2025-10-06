@@ -18,7 +18,7 @@ const publications = [
     metric: 'MAE: 4.69 hours',
     abstract:
       'This paper presents Deep Cyclone, a novel deep learning framework for enhanced cyclone trajectory and intensity prediction. By leveraging historical meteorological data and advanced neural network architectures, we achieved a mean absolute error of 4.69 hours in cyclone path prediction, significantly improving upon traditional forecasting methods. Our approach combines CNN and LSTM layers to capture both spatial and temporal patterns in atmospheric data.',
-    doi: 'https://doi.org/10.1063/5.0222545',
+    doi: 'https://pubs.aip.org/aip/acp/article-abstract/3171/1/070003/3302633/Deep-cyclone-A-data-driven-approach-to-enhanced',
     tags: ['Deep Learning', 'Weather Prediction', 'CNN', 'LSTM'],
     status: 'Published',
   },
@@ -43,7 +43,7 @@ const publications = [
     abstract:
       'This research introduces an AI-powered framework for interpreting baby cries to identify underlying needs (hunger, discomfort, pain, etc.). Using audio signal processing and deep learning, we trained models on a diverse dataset of infant vocalizations. Our system achieves 89% accuracy in classifying cry types, potentially helping new parents respond appropriately to infant needs. The framework includes a mobile application for real-time cry analysis and historical tracking.',
     doi: 'https://ieeexplore.ieee.org/document/10725318',
-    tags: ['Audio Processing', 'Healthcare AI', 'Mobile App', 'Deep Learning','Mel-frequency Cepstral Coefficients',Principle Component Analysis','Decision Tree','MongoDB','Streamlit'],
+    tags: ['Audio Processing', 'Healthcare AI', 'Mobile App', 'Deep Learning','Mel-frequency Cepstral Coefficients','Principle Component Analysis','Decision Tree','MongoDB','Streamlit'],
     status: 'Published',
   },
   // Presented papers with updated content
