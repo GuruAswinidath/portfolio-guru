@@ -4,24 +4,71 @@ import { Briefcase, Award } from 'lucide-react';
 const experiences = [
   {
     id: '1',
+    role: 'AI Engineering',
+    company: 'Amrita Vishwa Vidyapeetham',
+    period: 'Jul 2024 - Present',
+    type: 'Full-Time',
+    description:
+      'Working as an AI Engineer, implementing AI models for medical field projects.',
+    achievements: [
+      'Implemented AI-based diagnostic tool improving accuracy by 20%',
+      'Automated data preprocessing and feature extraction pipelines for healthcare datasets',
+      'Collaborated with medical professionals to optimize AI solutions for real-world use cases',
+      'Deployed AI models into production systems used by healthcare teams',
+    ],
+  },
+  
+  {
+    id: '2',
+    role: 'Software Intern',
+    company: 'NeST Digital',
+    period: 'Jun 2025- Jul 2025',
+    type: 'Internship',
+    description:
+      'Interned as a software developer, gaining experience in full-stack development, database management.',
+    achievements: [
+      'Implemented an AI-Monitoring-Agent using Python and Flask to track Meeting and Automatically extract Deadlines, Requests, Progress updates, Assigned tasks.Send the extracted meeting summary to any email via Gmail performance',
+      'Developed internal tools to optimize workflow efficiency',
+      'Contributed to frontend and backend features in ongoing projects',
+      'Received positive feedback from team lead for code quality and problem-solving',
+
+    ],
+  },
+  {
+    id: '3',
+    role: 'Club President',
+    company: 'amESE - Amrita Energy Swaraj Environment Club',
+    period: 'Dec 2024- Jul 2025',
+    type: 'leadership',
+    description:
+      'Led the amESE club, organizing ideathons and sustainability projects focused on green-tech solutions. Mentored team members and coordinated multiple hackathon participations.',
+    achievements: [
+      'Organized 4 successful ideathons, talks with industry experts, with 150+ participants',
+      'Led team to win 1st KSBB Youth Ideation Challenge, 2nd place at Sustainability Hackathon 2023',
+      'Mentored 10+ students in AI projects',
+    ],
+  },
+
+  {
+    id: '4',
     role: 'Frontend Intern',
     company: 'Exposys Datalabs',
-    period: '2024',
-    type: 'internship',
+    period: 'Dec 2024- Jan 2025',
+    type: 'Internship',
     description:
       'Built bulk email automation with SMTP integration, saving 2+ hours per day in manual email operations. Developed responsive frontend interfaces using React and integrated RESTful APIs for data management.',
     achievements: [
-      'Automated email workflow reducing processing time by 70%',
-      'Implemented responsive UI components used across 5+ projects',
+      'Automated email workflow reducing processing time by 50%',
+      'Implemented responsive UI components used across 3+ projects',
       'Collaborated with backend team to optimize API performance',
     ],
   },
   {
-    id: '2',
+    id: '5',
     role: 'Research Intern',
     company: 'ACM Kollam',
-    period: '2023',
-    type: 'internship',
+    period: 'Aug 2023 - Nov 2023',
+    type: 'Internship',
     description:
       'Worked on network traffic classification research, contributing to the development of machine learning models for granular mobile application traffic analysis.',
     achievements: [
@@ -30,19 +77,19 @@ const experiences = [
       'Achieved 94% classification accuracy on test dataset',
     ],
   },
+
   {
-    id: '3',
-    role: 'Club President',
-    company: 'amESE',
-    period: '2023-2024',
-    type: 'leadership',
+    id: '6',
+    role: 'Web Development Intern',
+    company: 'Datalense Services',
+    period: 'Aug 2023 - Sep 2023',
+    type: 'Internship',
     description:
-      'Led the amESE club, organizing ideathons and sustainability projects focused on green-tech solutions. Mentored team members and coordinated multiple hackathon participations.',
+      'Gained hands-on experience in web development using Laravel and PHP through real-world projects. Contributed to website deployment and maintenance tasks.',
     achievements: [
-      'Organized 3 successful ideathons with 150+ participants',
-      'Led team to win 2nd place at Sustainability Hackathon 2023',
-      'Mentored 20+ students in AI and full-stack development',
-      'Established partnerships with 5 local tech companies',
+       'Developed frontend and backend features for client websites',
+      'Contributed to deployment of G-Star Elevator website as part of the team',
+      'Learned best practices in web application development and version control',
     ],
   },
 ];
