@@ -16,12 +16,12 @@ const Resume = () => {
           <p className="text-secondary text-lg mb-6">
             Complete overview of my experience, education, skills, and achievements.
           </p>
-          <a href="/resume.pdf" download>
+          {/* <a href="/resume.pdf" download>
             <Button size="lg" className="group">
               <Download className="mr-2 h-5 w-5 transition-smooth group-hover:translate-y-1" />
               Download Full Resume (PDF)
             </Button>
-          </a>
+          </a> */}
         </motion.div>
 
         <motion.div
