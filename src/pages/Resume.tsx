@@ -74,7 +74,7 @@ const Resume = () => {
 
             {/* Internships */}
             <section>
-              <h3 className="font-bold text-lg mb-3 text-primary">Internships</h3>
+              <h3 className="font-bold text-lg mb-3 text-primary">Experience</h3>
               <ul className="space-y-4 text-secondary">
                 <li>
                   <p className="font-semibold">AI Engineer - Amrita Vishwa Vidyapeetham, Faridabad, New Delhi (Jul 2025 - Present)</p>
