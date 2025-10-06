@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { z } from 'zod';
+import emailjs from '@emailjs/browser';
 
 const contactSchema = z.object({
   name: z.string().trim().min(3, { message: 'Name must be at least 3 characters' }).max(100),
@@ -26,10 +27,7 @@ const Contact = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    // Clear error when user starts typing
-    if (errors[name]) {
-      setErrors((prev) => ({ ...prev, [name]: '' }));
-    }
+    if (errors[name]) setErrors((prev) => ({ ...prev, [name]: '' }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -38,26 +36,31 @@ const Contact = () => {
     setErrors({});
 
     try {
-      // Validate form data
       contactSchema.parse(formData);
 
-      // Simulate form submission
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      // Send email using EmailJS
+      await emailjs.send(
+        'service_q7ab7n6',     // Replace with your EmailJS Service ID
+        'template_qnbhf92',    // Replace with your EmailJS Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        'YOUR_PUBLIC_KEY'      // Replace with your EmailJS Public Key
+      );
 
       toast({
         title: 'Message sent successfully!',
         description: "I'll get back to you soon.",
       });
 
-      // Reset form
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
       if (error instanceof z.ZodError) {
         const newErrors: Record<string, string> = {};
         error.errors.forEach((err) => {
-          if (err.path[0]) {
-            newErrors[err.path[0] as string] = err.message;
-          }
+          if (err.path[0]) newErrors[err.path[0] as string] = err.message;
         });
         setErrors(newErrors);
       } else {
@@ -72,9 +75,10 @@ const Contact = () => {
     }
   };
 
-  const isFormValid = formData.name.trim().length >= 3 && 
-                      formData.email.includes('@') && 
-                      formData.message.trim().length >= 20;
+  const isFormValid =
+    formData.name.trim().length >= 3 &&
+    formData.email.includes('@') &&
+    formData.message.trim().length >= 20;
 
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 lg:px-8">
@@ -111,9 +115,7 @@ const Contact = () => {
                   placeholder="Your name"
                   className={errors.name ? 'border-destructive' : ''}
                 />
-                {errors.name && (
-                  <p className="text-destructive text-sm mt-1">{errors.name}</p>
-                )}
+                {errors.name && <p className="text-destructive text-sm mt-1">{errors.name}</p>}
               </div>
 
               <div>
@@ -129,9 +131,7 @@ const Contact = () => {
                   placeholder="your.email@example.com"
                   className={errors.email ? 'border-destructive' : ''}
                 />
-                {errors.email && (
-                  <p className="text-destructive text-sm mt-1">{errors.email}</p>
-                )}
+                {errors.email && <p className="text-destructive text-sm mt-1">{errors.email}</p>}
               </div>
 
               <div>
@@ -147,17 +147,10 @@ const Contact = () => {
                   rows={6}
                   className={errors.message ? 'border-destructive' : ''}
                 />
-                {errors.message && (
-                  <p className="text-destructive text-sm mt-1">{errors.message}</p>
-                )}
+                {errors.message && <p className="text-destructive text-sm mt-1">{errors.message}</p>}
               </div>
 
-              <Button
-                type="submit"
-                size="lg"
-                disabled={!isFormValid || isSubmitting}
-                className="w-full group"
-              >
+              <Button type="submit" size="lg" disabled={!isFormValid || isSubmitting} className="w-full group">
                 {isSubmitting ? (
                   'Sending...'
                 ) : (
